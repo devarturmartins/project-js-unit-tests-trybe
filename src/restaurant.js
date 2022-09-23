@@ -95,13 +95,12 @@
 
 const createMenu = (menu) => {
   const restaurante = {
-    fetchMenu: () => {
-      const objetosDoMenu = { menu };
-    },
+    fetchMenu: () => menu,
     consumption: [],
-    order: () => {},
+    order: (item) => { restaurante.consumption.push(item); },
     pay: () => {},
   };
+  return restaurante;
 };
 
 module.exports = createMenu;
