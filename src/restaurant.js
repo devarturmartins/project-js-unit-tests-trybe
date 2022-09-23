@@ -98,9 +98,11 @@ const createMenu = (menu) => {
     fetchMenu: () => menu,
     consumption: [],
     order: (item) => { restaurante.consumption.push(item); },
-    pay: () => {},
+    pay: () => {
+      let totalConta = 0;
+    },
   };
   return restaurante;
 };
-
+const retornoMenu = createMenu({ food: { coxinha: 3.00, pipoca: 2.00 }, drink: { agua: 2.0 } });
 module.exports = createMenu;

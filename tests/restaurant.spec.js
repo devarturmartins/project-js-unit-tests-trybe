@@ -93,8 +93,8 @@ describe('10 - Implemente a função `createMenu`, bem como seus casos de teste'
     // TESTE 5: Verifique se, ao chamar uma função associada à chave `order` no objeto retornado,
     // passando uma string como parâmetro (como `objetoRetornado.order('coxinha')`), tal string é adicionada
     // ao array retornado em `objetoRetornado.consumption`.
-    objetoRetornado.order('Coxinha');
-    expect(objetoRetornado.consumption).toEqual(['Coxinha']);
+    objetoRetornado.order('coxinha');
+    expect(objetoRetornado.consumption).toEqual(['coxinha']);
     // ```
     // const objetoRetornado = createMenu(objetoQualquer);
     // objetoRetornado.order("coxinha");
@@ -106,11 +106,10 @@ describe('10 - Implemente a função `createMenu`, bem como seus casos de teste'
 
     // TESTE 6: Verifique se, ao adicionar três pedidos, dentre bebidas e comidas, o array `objetoRetornado.consumption` contém os itens pedidos.
     // ```
-    // objetoRetornado.order("coxinha");
-    // objetoRetornado.order("agua");
-    // objetoRetornado.order("sopa");
-    // objetoRetornado.order("sashimi");
-    // objetoRetornado.consumption // Retorno: ["coxinha", "agua", "sopa", "sashimi"]
+     objetoRetornado.order("agua");
+     objetoRetornado.order("sopa");
+     objetoRetornado.order("sashimi");
+    expect(objetoRetornado.consumption).toEqual(["coxinha", "agua", "sopa", "sashimi"]); // Retorno: 
     // ```
 
     // Agora faça o TESTE 7 deste arquivo.
@@ -118,10 +117,10 @@ describe('10 - Implemente a função `createMenu`, bem como seus casos de teste'
 
     // TESTE 7: Verifique se a função `order` aceita que pedidos repetidos sejam acrescidos a `consumption`.
     // ```
-    // objetoRetornado.order('coxinha');
-    // objetoRetornado.order('agua');
-    // objetoRetornado.order('coxinha');
-    // objetoRetornado.consumption // Retorno: ['coxinha', 'agua', 'coxinha']
+     objetoRetornado.order('coxinha');
+     objetoRetornado.order('agua');
+     objetoRetornado.order('coxinha');
+    expect(objetoRetornado.consumption).toEqual(['coxinha', 'agua', 'sopa', 'sashimi', 'coxinha', 'agua', 'coxinha']) // Retorno: []
     // ```
 
     // Agora faça o TESTE 8 deste arquivo.
